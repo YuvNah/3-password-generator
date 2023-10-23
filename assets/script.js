@@ -43,12 +43,17 @@ function generatePassword() {
   //var result = [];
   if (numberOfCharacters >= 8 && numberOfCharacters <= 128) {
     //add confirm special characters here
-    /*var specialCharacters = confirm("Click OK to confirm special chcracters");
+    //var specialCharacters = confirm("Click OK to confirm special chcracters");
     var lowercaseCharacters = confirm("lowercase characters");
     var uppercaseCharacters = confirm("uppercase characters");
-    var numericCharacters = confirm("numbers in the password");*/
+    //var numericCharacters = confirm("numbers in the password");*/
     for (var i = 1; i <= numberOfCharacters; i++) {
-      console.log("test" + i);
+      if (uppercaseCharacters) {
+        console.log(randomUpper);
+      }
+      if (lowercaseCharacters) {
+        console.log(randomLetter);
+      }
     }
     /*if (specialCharacters) {
       result.push(randomSpecial);
