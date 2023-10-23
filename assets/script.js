@@ -40,15 +40,17 @@ var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
 function generatePassword() {
   // create a var of the number chatacters in the password
   var numberOfCharacters = prompt("Please pick a number between 8-128");
-  var result = [];
+  //var result = [];
   if (numberOfCharacters >= 8 && numberOfCharacters <= 128) {
     //add confirm special characters here
-    var specialCharacters = confirm("Click OK to confirm special chcracters");
+    /*var specialCharacters = confirm("Click OK to confirm special chcracters");
     var lowercaseCharacters = confirm("lowercase characters");
     var uppercaseCharacters = confirm("uppercase characters");
-    var numericCharacters = confirm("numbers in the password");
-
-    if (specialCharacters) {
+    var numericCharacters = confirm("numbers in the password");*/
+    for (var i = 1; i <= numberOfCharacters; i++) {
+      console.log("test" + i);
+    }
+    /*if (specialCharacters) {
       result.push(randomSpecial);
     }
 
@@ -64,7 +66,7 @@ function generatePassword() {
       result.push(randomNumbers);
     }
 
-    /* if (uppercaseCharacters) {
+    if (uppercaseCharacters) {
       result.push(randomUpper);
     }*/
   } else if (numberOfCharacters < 8) {
@@ -72,7 +74,8 @@ function generatePassword() {
   } else if (numberOfCharacters > 128) {
     alert("Password lenth cannot be longer than 128 characters");
   }
-  return result.join("");
+
+  //return result.join("");
 }
 
 // Write password to the #password input
